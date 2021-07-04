@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+    <head>
+	    <title>Principe de fonctionnement </title>
+	    <link rel="stylesheet" href="style.css" />
+	    <meta charset="utf-8" />
+    </head>
+
+    <body>
+	    <h1>Principe de fonctionnement des protocoles TCP et UDP </h1>
+	
+	    <h6><b><u>TCP</u></b></h6>
+	    <p>
+		    Le protocole TCP ou <i>Transmission Control Protocol </i>est un protocle de transport fiable stateful (avec état) donc muni d'une connexion définit dans la RFC 793. Dans le modèle inernet, ce protocole est aussi appelé TCP/IP. <br>
+	    </p>
+	    <p> 
+		    TCP vérifie que le destinataire est prêt à recevoir les données. Puis, il décompose les gros paquets de données en paquets plus petits pour que IP les accepte avant de numéroter les paquets et, à la réception de vérifier qu'ils sont tous bien arrivés, de redemander les paquets manquants et de les réassembler avant de les données aux logiciels. Des accusés de réception ont mêmes envoyés pour prévenir l'expéditeur que les données sont bien arrivés. De plus, il utilise une technique de connexion appellée "three-way handshake" qui permet de vérifier que la source est bien celle à qui on désire envoyer les données. Il prend également du temps sur le réseau pour envoyer les données à cause du système d'accusé de réception et du système qui s'assure que le destinataire répond toujours.
+	    </p>
+	    <p>
+	    	<u>Principe de fonctionnement de TCP</u>
+	    	<br>
+		    <img src="TCP.gif" />
+		    <br> Cette illustration nous montre de quelle manière fonctionne le protocole TCP communiquant avec un ordinateur (celui à qui on compte envoyer les données).
+	    </p>
+
+	    <h6><b><u>UDP</u></b></h6>
+	    <p>
+	        Le protocole UDP ou <i> User Datagram Protocol </i>est un protocole de transport peu fiable mais rapide et il n'est pas muni d'une connexion. De plus, il est définit dans la RFC 768.
+	    </p>
+	    <p>
+	        UDP est plus simple que le protocle TCP car il ne vérifié pas si les données sont bien arrivées ni même si elles sont arrivées dans l'ordre et s'il n'en manque pas. C'est ce qui le rend plus simple étant donné qu'il n'utilise pas ce système de vérification du transfert des données. Il ne fait donc que transmettre les données voulues (même si celle-ci ont beaucoup moins de sûreté d'arriver dans leur ordre premier donc l'odre voulu ou même d'arriver tout simplement). Cependant, au contraire de TCP, il prend moins de temps sur le réseau.
+	    </p>
+
+	    <h3>Récapitulatif des différences entre les protocoles</h3>
+	    <table border=1 align="center">
+		    <tr><td> / </td><th>TCP</th><th>UDP</th></tr>
+		    <tr><th>Sigle</th><td>Transport Control Protocol</td><td>User Datagram Protocol</td></tr>
+		    <tr><th>RFC (=norme)</th><td>793</td><td>768</td></tr>
+		    <tr><th>Contrôle des paquets</th><td>Envoie des accusés de réception</td><td>Sans aucun contrôle de réception des données donc aucune fiabilité</td></tr>
+		    <tr><th>Rapidité</th><td>Plus lent que UDP à cause de son système de vérification des données (via les accusés de réception)</td><td>Très rapide</td></tr>
+		    <tr><th>Sécurité</th><td>Très sécurisé (via la technique de connexion "three-way handshake")</td><td>Aucune sécurité</td></tr>
+	    </table>
+        <ul type="circle">
+        	<h5>
+        		<li>Retour au <a href="index.html">sommaire</a></li>
+        	</h5>
+        </ul>
+    </body>
+</html>
+

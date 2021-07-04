@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+    <head>
+	    <title>Evolution de TCP et UDP</title>
+	    <link rel="stylesheet" href="style.css" />
+	    <meta charset="utf-8" />
+    </head>
+    <body>
+	    <h1>Perspectives d'évolution </h1>
+	    <p>
+	    	<h6><u>T/TCP</u></h6>
+	    	En 1994, Bob Braden a développé un protocole T/TCP  (Transactional Transmisssion Control Protocol) qui est une variante du protocole TCP. Il a été développé pour remplir la l'écart entre TCP et UDP (définit dans la RFC 1644). Ce dernier est donc plus rapide que TCP et beaucoup plus fiable que lui (car TCP souffrait de plusieurs problèmes de sécrutité majeurs).
+	    	<h6><u>TCP Fast Open</u></h6>
+	    	En 2011, une autre extension de TCP fut présentée : TCP Fast Open qui est un protocole encore plus fiable encore que T/TCP. Il est basé sur la latence qu'entraîne le système de sécurité de TCP et il vise à raccourcir le délai d'ouverture d'une connexion avec le serveur permettant ainsi de gagner du temps et d'nevoyer les images ou autres plus rapidemment (car le temps de connexion est réduit).
+	    	<h6><u>STCP</u></h6>
+	    	En 2000 était publié le protocole STCP, une alternative aux protocoles TCP et UDP (définit dans la RFC 4960). STCP assure la fiabilité, la remise en ordre des séquences et le contrôle de congestion (afflux). Cependant, STCP gère des courtes séquences alors que TCP est orienté octets. De plus, STCP offre des communications multi-flux.
+	    	<h6><u>Quic</u></h6>
+	    	En 2013, un protocole Google nommé <i>QUIC</i> est publié et il bâti sur le protocole UDP. Il permet d'accéléer le Web. Quic est protocole qui réduit le nombre d'allers-retours à zéro lors de la connexion avec un site déjà connu (par l'odinateur) (il va plu loin que le protocole SPDY qui réduisait simplement le nombre d'allers-retours). Quic va supposer que les paramètres échangés lors de la première connexion ssont les mêmes ; il va alors enclencher directement la connexion avec l'ordinateur (et s'ils changent, ce dernier va s'adapter en faisant le nécessaire).
+	    </p>
+	    <ul type="circle">
+			<h5><li>Retour au <a href="index.html">sommaire</a></li></h5>
+	    </ul>
+     </body>
+</html>
+
